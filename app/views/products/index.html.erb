@@ -1,0 +1,29 @@
+
+<table class="table">
+  <thead >
+    <tr>
+      <th class="col-2">Name</th>
+      <th class="col-8">Description</th>
+      <th class="text-center">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+
+  <% @products.each do |product| %>
+  <tr>
+  <td> <%= product.product_name %> </td>
+  <td > <%= product.product_description %> </td>
+  <td > <%= product.product_price %> </td>
+  <td class="text-center"> 
+    <%= link_to "View", product, class: "btn btn-info"%> 
+  <% end %> 
+  </tbody>
+</table>
+
+<div class="col-2">
+<td> <%= link_to "Create", newProduct_path, class: "btn btn-success btn-lg" %> </td> 
+</div>
+
+</div>

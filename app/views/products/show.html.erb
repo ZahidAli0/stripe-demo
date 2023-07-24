@@ -1,0 +1,41 @@
+
+<div class="container">
+<div class="container ct-u-paddingTop40 ct-u-paddingBottom100">
+  <div class="row">
+    <div class="col-md-12 ct-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="theBlogGrid">
+              <ul class="row blogGrid" id="blogGrid">
+
+                <li class="col-xs-12 col-sm-6 col-md-3 blog-inner" id="21">
+
+                  <div class="imgHolder" onclick="location.href='/about-us/blog/case-studies/building-in-webcorpco-cms-8.stml'">
+                   <h2> <p> <%= @product.product_name%> </p> </h2>
+
+                  
+                    <div class="description-box animateBottomName">
+                    <p> <%= @product.product_description%> </p> 
+                    </div>
+
+                    <div class="description-box animateBottomName">
+                    <p> <%= @product.product_price%> </p> 
+                    </div>
+                  </div>
+                 
+                  <td> <%= link_to "Products", index_path, class: "btn btn-primary " %>  <td></td> 
+                  <td><%= button_to "Submit Payment", checkout_create_path, params: {:product_id => @product.id }, remote: true %> </td>
+                  <td><%= button_to 'Subscribe', payments_create_path, method: :post %></td>             
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
